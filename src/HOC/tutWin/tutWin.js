@@ -138,25 +138,15 @@ export class tutWin extends Component {
             in={this.state.tut1}
             timeout={1000}
             classNames="tutAnim"
-
             >
             <>
-
-
                <div className={myClassSass.contentWrapper}>
-
                 <div className={myClassSass.tutWinWrapper_}>
-
-                    {/* <video id="videoClip" src={this.props.videoTut} autoPlay preload="auto" width="100%" height="100%" type="video/mp4">.
-
-                    </video> */}
                     <img id="gifClip"  className={myClassSass.gifi} src={this.props.videoTut} alt="Empty"/>
                     <img src={replayI} className={myClassSass.tutWinWrapperRepI} onClick={() => this.replayHandler()}/>
-
                 </div>
-
                 </div>
-                </>
+            </>
             </CSSTransition>
 
 

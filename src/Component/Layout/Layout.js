@@ -33,8 +33,6 @@ export class Layout extends Component {
             delay: 100,
             liked: false,
             disliked: false
-            
-
         }
     }
 
@@ -195,13 +193,7 @@ export class Layout extends Component {
         <>
             
             <TutWin 
-            firstTutDone={false} 
-            videoTut={videoTut1} 
-            animLength={7200} 
-            tut1State={(e) =>this.tut1Finsihed(e)}
-            cancelTut={() => this.tut2Finsihed(true, 500)}
-            firstAnimActive={(e) => this.firstAnimActive(e)}
- 
+        
             >  
             </TutWin>
         </>
@@ -246,7 +238,6 @@ export class Layout extends Component {
                     <img  src={disLikeI} className={this.state.liked ? myClassSass.likeIStyle_ :  myClassSass.likeIStyle}/>
                     <img  src={likeI} className={this.state.disliked ? myClassSass.disLikeIStyle_ :  myClassSass.disLikeIStyle} />
                 </div>
-             
 
                
                 <Card
@@ -299,7 +290,7 @@ export class Layout extends Component {
                 </div>
               
                 {tutorial}
-               
+               <h1>Unit test</h1>
      
           </div>
             
