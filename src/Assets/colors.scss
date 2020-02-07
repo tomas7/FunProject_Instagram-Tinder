@@ -1,0 +1,9 @@
+$colors: (
+    bg: rgb(253, 170, 15),
+    lightBg: lighten( rgb(253, 170, 15), 40% ),
+    darkenBg: darken( rgb(253, 170, 15), 40% ),
+    green_: rgb(93, 206, 120),
+    red_: rgb(255, 34, 34),
+    lightRed: lighten( rgb(255, 34, 34), 40% ),
+    darkenRed: darken( rgb(255, 34, 34), 40% ),
+)

@@ -1,0 +1,96 @@
+@mixin swipeStyle ($opacity:0, $transformRot: 0deg, $transition: initial){
+  opacity: $opacity;
+  transform: scale(1.03) translate(-50%, -50%) rotate(#{$transformRot})!important;
+  transition: $transition;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.fadeIn-appear {
+  opacity: 0;
+}
+.fadeIn-enter-done {
+  opacity: 1;
+  transition: all .2s;
+}
+
+.swipeLeft-enter-active {
+  @include swipeStyle(1, null , all 1.5s)
+}
+
+.swipeLeft-enter-done {
+  @include swipeStyle(0, 29deg , all 1.5s)
+}
+
+.swipeLeft-exit-active {
+  opacity: 0;
+  transition: all 1.5s;
+}
+
+.swipeLeft-exit-done{
+  opacity: 1;
+  transition: all 1.5s;
+}  
+
+.swipeRight-enter-active {
+  @include swipeStyle(1, null , all 1.5s)
+}
+
+.swipeRight-enter-done {
+  @include swipeStyle(0, -29deg , all 1.5s)
+}
+
+.swipeRight-exit-active {
+  opacity: 0;
+  transition: all 1.5s;
+}
+
+.swipeRight-exit-done{
+  opacity: 1;
+  transition: all 1.5s;
+}  
+
+.tutAnim-enter-active {
+  /* background-color: red!important; */
+  opacity: 0!important;
+
+}
+
+.tutAnim-enter-done {
+  /* background-color: green!important; */
+  opacity: 1!important;
+  transition: all .5s;
+
+}
+
+.tutAnim-exit-active {
+  opacity: 1!important;
+}
+
+.tutAnim-exit-done{
+  opacity: 0!important;
+  transition: all .5s;
+}  
+
+  @media only screen and (max-width: 450px){
+    #t1 {
+        display: none;
+    }
+    #t2 {
+        display: none;
+    }
+
+
+    
+}

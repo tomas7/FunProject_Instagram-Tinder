@@ -1,0 +1,23 @@
+.infoBarWrapper {
+    padding: 15px 15px 20px 15px;
+    .infoBarIconWrapper {
+        display: block;
+        width: 100%;
+        img {
+            width: 40px;
+            padding: 0px 2px;
+        }
+        .infoBarBookmarkI {
+            float:right;
+        }
+    }
+}
+
+.infoBarViewText {
+    color: rgb(218, 218, 218);
+}
+
+.infoBarTimeText {
+    color: rgb(218, 218, 218);
+    font-size: .8em;
+}

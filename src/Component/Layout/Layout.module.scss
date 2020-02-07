@@ -1,0 +1,71 @@
+@mixin likeIconStyle($width, $opacity){
+    position: relative;
+    left: -100px;
+    transition-duration: 1s;
+    pointer-events: none;
+    
+    width: $width;
+    opacity: $opacity;
+}
+
+@mixin dislikeIconStyle($width, $opacity){
+    position: relative;
+    left: 100px;
+    transition-duration: 1s;
+    pointer-events: none;
+
+    width: $width;
+    opacity: $opacity;
+}
+
+
+.contentContainer {
+    transform-origin: -50% -90%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+ 
+}
+
+.textFieldWrapper {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.467);
+    padding: 40px 0px;
+    div {
+        width: 40%;
+        margin: 0 auto;
+        h2 {
+            padding: 0px;
+            margin: 0px;
+            z-index: 999999;
+        }
+    }
+}
+
+.likeIStyle {
+    @include likeIconStyle(200px, 0)
+}
+
+.likeIStyle_ {
+    @include likeIconStyle(300px, 1)
+}
+
+.disLikeIStyle {
+    @include dislikeIconStyle(200px, 0)
+}
+
+.disLikeIStyle_ {
+    @include dislikeIconStyle(300px, 1)
+
+}
+
+.iconWrapper {
+    pointer-events: none;
+}
+

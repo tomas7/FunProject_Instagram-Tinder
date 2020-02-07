@@ -1,0 +1,145 @@
+@import '../../Assets/colors.scss';
+
+$cardShadow: 0px 18px 39px -21px rgba(0,0,0,0.33);
+$smallScreen: 450px;
+
+@mixin fontAdj($color, $fontSize: 8px ) {
+  font-size: $fontSize;
+  color: $color;
+}
+@mixin vendor-prefix($name, $value) {
+  @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+    #{$vendor}#{$name}: #{$value};
+  }
+}
+
+@mixin overlayStyle($direction: right) {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  #{$direction}: 0;
+  cursor: pointer;
+}
+
+@mixin smallScreen {
+  @media (max-width: $smallScreen){
+    @content
+  }
+}
+
+.bodyWrapper {
+  width: 400px;
+  height: auto;
+  background-color: white;
+  margin: 0 auto;
+  transform-origin: -50% -90%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  box-shadow: $cardShadow;
+
+
+  @include smallScreen{
+       width: 80%;
+  }
+ 
+
+}
+
+.leftOverlay {
+  @include overlayStyle(left)
+}
+
+.rightOverlay {
+  @include overlayStyle(right)
+
+}
+
+.testClass {
+  background-color: map-get($map: $colors, $key: lightRed);
+}
+
+.leftOverlay_anim {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+
+  @include vendor-prefix(animation-name, redBlink);
+  @include vendor-prefix( animation-duration, 3s);
+  @include vendor-prefix( animation-iteration-count, 1);
+  @include vendor-prefix(  animation-delay, 3s);
+}
+
+.rightOverlay_anim {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right:  0;
+
+  @include vendor-prefix(animation-name, blueBlink);
+  @include vendor-prefix( animation-duration, 3s);
+  @include vendor-prefix( animation-iteration-count, 1);
+  @include vendor-prefix(  animation-delay, 3s);
+}
+
+
+
+
+@keyframes blueBlink{
+  0%{
+      background-color: transparent;
+  }
+
+  50%{
+      background-color: map-get($colors, red_);
+  }
+
+  100%{
+      background-color: transparent;
+  }
+}
+
+@keyframes redBlink{
+  0%{
+      background-color: transparent;
+  }
+
+  50%{
+      background-color:  map-get($colors, green_);
+  }
+
+  100%{
+      background-color: transparent;
+  }
+}
+
+@-webkit-keyframes blueBlink{
+  0%{
+      background-color: transparent;
+  }
+
+  50%{
+      background-color: map-get($colors, red_);
+  }
+
+  100%{
+      background-color: transparent;
+  }
+}
+
+@-webkit-keyframes redBlink{
+  0%{
+      background-color: transparent;
+  }
+
+  50%{
+    background-color:  map-get($colors, green_);
+  }
+
+  100%{
+      background-color: transparent;
+  }
+}
+

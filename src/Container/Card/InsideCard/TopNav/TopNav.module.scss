@@ -1,0 +1,22 @@
+.TopNavWrapper {
+    padding: 15px 15px;
+    height: 68px;
+    * {
+        float: left;
+    }
+    p {
+        font-size: 1.2em;
+        margin-left: 20px;
+     
+     }
+    .avatarStyle {
+        width: 75px;
+        height: auto;
+    
+    }
+    .menuIStyle {
+        float:right!important;
+        width: 50px;
+        padding: 16px 0px;
+    }
+}
