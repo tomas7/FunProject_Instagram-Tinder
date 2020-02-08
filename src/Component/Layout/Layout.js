@@ -193,7 +193,12 @@ export class Layout extends Component {
         <>
             
             <TutWin 
-        
+            firstTutDone={false} 
+            videoTut={videoTut1} 
+            animLength={7200} 
+            tut1State={(e) =>this.tut1Finsihed(e)}
+            cancelTut={() => this.tut2Finsihed(true, 500)}
+            firstAnimActive={(e) => this.firstAnimActive(e)}
             >  
             </TutWin>
         </>
