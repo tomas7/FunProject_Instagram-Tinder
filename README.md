@@ -10,6 +10,8 @@ Soon, I got inspired by UI of Instagram and the animation of Tinder. That is wha
 
 Modern Sass
 
+Few unit-tests
+
 Animations powered mainly with css and react transition feature
 
 video tutorial explaining UI and user interaction
